@@ -20,3 +20,5 @@ The database will contain:
 1. Patient address
 1. Patient gender
 1. Patient health
+
+The variable name is `variable`. 
