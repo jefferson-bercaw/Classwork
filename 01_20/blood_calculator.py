@@ -46,7 +46,7 @@ def LDL_driver():
     LDL_output(value,answer)
 
 def LDL_input():
-    LDL_value = int(input("Enter the LDL result: ")
+    LDL_value = int(input("Enter the LDL result: "))
     return LDL_value
     
 def LDL_analysis(LDL_int):
@@ -61,7 +61,7 @@ def LDL_analysis(LDL_int):
     return answer
     
 def LDL_output(value,answer):
-    print("The LDL result of {} is considered {}.format(value,answer))
+    print("The LDL result of {} is considered {}".format(value,answer))
     
 
 interface()
