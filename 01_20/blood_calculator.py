@@ -40,4 +40,15 @@ def LDL_input():
     LDL_value = int(input("Enter the LDL result: ")
     return LDL_value
     
+def LDL_analysis(LDL_int):
+    if LDL_int >= 190:
+        answer = "Very high"
+    elif LDL_int >= 160:
+        answer = "High"
+    elif LDL_int >= 130:
+        answer = "Borderline high"
+    else:
+        answer = "Normal"
+    return answer
+    
 interface()
