@@ -67,4 +67,15 @@ def Chol_input():
     C_value = int(input("Enter the Cholesterol result: "))
     return C_value
     
+def C_analysis(val):
+    if val >= 240:
+         answer = "High"
+    elif val >= 200:
+         answer = "Borderline high"
+    else:
+         answer = "Normal"
+    return answer
+    
+
+    
 interface()
