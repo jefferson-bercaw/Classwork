@@ -3,6 +3,7 @@ def interface():
     while True:
         print("Select an option:")
         print("1 - HDL")
+        print("2 - LDL")
         print("9 - Quit")
         choice = input("Select an option: ")
         
@@ -10,6 +11,8 @@ def interface():
             return
         elif choice == "1":
             HDL_driver()
+        elif choice == "2":
+            LDL_driver()
 
     print("Program ended")
 
