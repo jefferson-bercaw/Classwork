@@ -76,6 +76,8 @@ def C_analysis(val):
          answer = "Normal"
     return answer
     
-
+def C_output(val,ans):
+    print("The cholesterol result of {} is considered {}".format(val,ans))
+    
     
 interface()
