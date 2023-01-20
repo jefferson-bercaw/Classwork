@@ -63,5 +63,8 @@ def LDL_analysis(LDL_int):
 def LDL_output(value,answer):
     print("The LDL result of {} is considered {}".format(value,answer))
     
-
+def Chol_input():
+    C_value = int(input("Enter the Cholesterol result: "))
+    return C_value
+    
 interface()
