@@ -1,16 +1,21 @@
-def create_patient_entry(patient_name, patient_mrn, patient_age):
-    new_patient = [patient_name, patient_mrn, patient_age, []]
+def create_patient_entry(first_name, last_name, patient_mrn, patient_age):
+    new_patient = {'First Name': first_name,
+                    'Last Name': last_name,
+                    'MRN': patient_mrn,
+                    'Age': patient_age}
     return new_patient
 
 
 def main_driver():
     db = []
 
-    db.append(create_patient_entry("Ann Ables", 1, 34))
-    db.append(create_patient_entry("Jeff Jeff", 2, 63))
-    db.append(create_patient_entry("Bob Saget", 3, 11))
+    db.append(create_patient_entry("Ann", "Ables", 1, 34))
+    db.append(create_patient_entry("Jeff", "Jeff", 2, 63))
+    db.append(create_patient_entry("Bob", "Saget", 3, 11))
+
 
     print(db)
+    return
     add_test_to_patient(db, 3, "HDL", 120)
     add_test_to_patient(db, 3, "LDL", 68)
 
