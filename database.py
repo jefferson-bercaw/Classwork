@@ -8,12 +8,11 @@ def create_patient_entry(first_name, last_name, patient_mrn, patient_age):
 
 
 def main_driver():
-    db = []
+    db = {}
 
-    db.append(create_patient_entry("Ann", "Ables", 1, 34))
-    db.append(create_patient_entry("Jeff", "Jeff", 2, 63))
-    db.append(create_patient_entry("Bob", "Saget", 3, 11))
-
+    db[1] = create_patient_entry("Ann", "Ables", 1, 34)
+    db[2] = create_patient_entry("Jeff", "Jeff", 2, 63)
+    db[3] = create_patient_entry("Bob", "Saget", 3, 11)
 
     add_test_to_patient(db, 3, "HDL", 120)
     add_test_to_patient(db, 3, "LDL", 68)
@@ -54,10 +53,10 @@ def find_result(db, mrn, test_name):
 
 
 def get_patient_entry(db, mrn_to_find):
-    for patient in db:
-        if patient['MRN'] == mrn_to_find:
-            return patient
-    return False
+    patient = db.get(mrn_to_find)
+    if patient is None:
+        return False
+    return patient
 
 
 def add_test_to_patient(db, mrn_to_find, test_name, test_value):
@@ -74,8 +73,8 @@ def get_full_name(patient_dict):
     full_name = patient_dict["First Name"] + ' ' + patient_dict["Last Name"]
     return full_name
     
-def print_database(patient_dict):
-    for patient in patient_dict:
+def print_database(db):
+    for patient in db.values():
         print("MRN: {}, Full Name: {}, Age: {}".format(patient["MRN"], get_full_name(patient), patient["Age"]))
         
 
