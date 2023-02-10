@@ -18,15 +18,17 @@ def main_driver():
     add_test_to_patient(db, 3, "HDL", 120)
     add_test_to_patient(db, 3, "LDL", 68)
 
-    print_database(db)
-    print(db)
-    return
+
     
-    room_numbers = ["103", "232", "333"]
-    print_directory(db, room_numbers)
+    # room_numbers = ["103", "232", "333"]
+    # print_directory(db, room_numbers)
 
     res = find_result(db, 3, "HDL")
     print(res)
+    
+    print_database(db)
+    print(db)
+    return
 
 
 def print_directory(db, room_numbers):
