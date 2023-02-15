@@ -11,7 +11,7 @@ class Patient:
     def get_full_name(self):
         full_name = self.first_name + ' ' + self.last_name
         return full_name
-        
+
     def is_adult(self):
         if self.age >= 18:
             return True
@@ -27,6 +27,7 @@ def main():
     print(new_patient.last_name)
     print(new_patient.get_full_name())
     print(new_patient.is_adult())
+
 
 if __name__ == '__main__':
     main()
