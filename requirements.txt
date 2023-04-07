@@ -1,4 +1,6 @@
+jupyter
 pytest
-pytest_pycodestyle
-
-
+pytest-pycodestyle
+requests
+flask
+Pillow
